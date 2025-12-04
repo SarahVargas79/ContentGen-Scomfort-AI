@@ -1,0 +1,25 @@
+.main-header {
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.logo-icon {
+  height: 55px;
+  width: auto;
+  object-fit: contain;
+}
+
+.header-text {
+  text-align: left;
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scomfort ContentGen</title>
+
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="icon" type="image/png" href="img/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/responsivo.css" />
+  </head>
+  <body>
+    <div class="container">
+
+      <header class="main-header">
+        <div class="logo-wrapper">
+          <img src="img/favicon.svg" alt="Logo Scomfort" class="logo-icon" />
+
+          <div class="header-text">
+            <h1>ContentGen</h1>
+            <h2>Assistente de Conteúdo com IA Generativa</h2>
+          </div>
+        </div>
+
+        <p class="subtitle">
+          Gere descrições de produtos e FAQ no tom de voz ultra-confortável da
+          <strong>Scomfort</strong>.
+        </p>
+      </header>
+
+      <!-- =========================================================================
+           SEÇÃO: FORMULÁRIO DE CONTROLE (Instruções, Exemplo, Tipo e Quantidade)
+      ========================================================================= -->
+      <section class="controls">
+
+        <div class="input-group">
+          <label for="instrucoes">1. Instruções do Tênis / Tópico:</label>
+          <textarea
+            id="instrucoes"
+            rows="6"
+            placeholder="Ex: Cor: Preto; Material: Lã Sustentável; Diferenciais: Palmilha com memória..."
+          >
+Classic Cinza Urbano; Material: Knit respirável com fibras recicladas; Tecnologias: Palmilha ScomfortFoam, amortecimento de impacto e solado antiderrapante; Uso Ideal: Profissionais que passam longas horas em pé, como enfermeiros, professores e vendedores; Estilo: Casual premium para rotina e trabalho.</textarea
+          >
+        </div>
+
+        <div class="prompt-buttons">
+          <button class="example-btn" onclick="preencherExemplo(0)">
+            Exemplo 1
+          </button>
+          <button class="example-btn" onclick="preencherExemplo(1)">
+            Exemplo 2
+          </button>
+          <button class="example-btn" onclick="preencherExemplo(2)">
+            Exemplo 3
+          </button>
+          <button class="example-btn" onclick="preencherExemplo(3)">
+            Exemplo 4
+          </button>
+          <button class="example-btn" onclick="preencherExemplo(4)">
+            Exemplo 5
+          </button>
+        </div>
+
+        <div class="config-row">
+
+          <div class="input-group">
+            <label for="tipo_conteudo">2. Tipo de Conteúdo:</label>
+            <!-- Select customizado (UI) -->
+            <div class="custom-select-wrapper">
+              <div class="custom-select" id="customSelect">
+                <span class="custom-select-trigger"
+                  >Descrição Curta (E-mail/Ads)</span
+                >
+
+                <ul class="custom-options">
+                  <li
+                    data-value="Descricao Curta (E-mail/Ads)"
+                    class="selected"
+                  >
+                    Descrição Curta (E-mail/Ads)
+                  </li>
+                  <li data-value="Descricao Completa (Pagina do Produto)">
+                    Descrição Completa (Página do Produto)
+                  </li>
+                  <li data-value="Resposta Curta para FAQ">
+                    Resposta Curta para FAQ
+                  </li>
+                  <li data-value="Texto para Postagem em Rede Social">
+                    Texto para Postagem em Rede Social
+                  </li>
+                </ul>
+              </div>
+
+              <!-- select real (acessibilidade + integração com formulários) -->
+              <select id="tipo_conteudo" class="hidden-select">
+                <option value="Descricao Curta (E-mail/Ads)">
+                  Descrição Curta (E-mail/Ads)
+                </option>
+                <option value="Descricao Completa (Pagina do Produto)">
+                  Descrição Completa (Página do Produto)
+                </option>
+                <option value="Resposta Curta para FAQ">
+                  Resposta Curta para FAQ
+                </option>
+                <option value="Texto para Postagem em Rede Social">
+                  Texto para Postagem em Rede Social
+                </option>
+              </select>
+
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="num_opcoes">3. Opções:</label>
+            <input type="number" id="num_opcoes" min="1" max="5" value="3" />
+          </div>
+        </div>
+
+        <button id="gerarBtn" class="primary-btn">
+          <svg
+            class="btn-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="currentColor"
+            viewBox="0 0 16 16"
+          >
+            <path d="M16 2L6 12H10v4l10-10z" />
+          </svg>
+          GERAR TEXTOS SCOMFORT
+        </button>
+      </section>
+
+      <!-- =========================================================================
+           SEÇÃO: RESULTADO GERADO PELA IA
+      ========================================================================= -->
+      <section class="output-section">
+        <h3>Conteúdo Gerado:</h3>
+        <div id="loading" class="hidden">Gerando conteúdo...</div>
+        <div id="outputContainer" class="output-container hidden"></div>
+        <div id="error-message" class="hidden error-msg"></div>
+      </section>
+      
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

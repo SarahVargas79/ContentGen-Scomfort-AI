@@ -1,0 +1,87 @@
+/* =============================================================================
+   SEÇÃO DE RESULTADOS
+============================================================================= */
+
+.output-section {
+  margin-top: 45px;
+  padding-top: 35px;
+  border-top: 2px dashed var(--border);
+}
+
+#loading {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 20px;
+  margin: 15px 0;
+  color: var(--accent-light-orange);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+#loading::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  border: 3px solid var(--accent-light-orange);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+.output-section h3 {
+  margin-bottom: 25px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.output-section h3::before {
+  content: "📝";
+  font-size: 1.3rem;
+}
+
+#outputContainer {
+  background-color: var(--accent-light-orange);
+  border: 1px solid var(--accent-main-orange);
+  border-radius: 12px;
+  padding: 24px;
+  min-height: 120px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.output-item {
+  color: var(--text-main) !important;
+}
+
+.output-item strong {
+  display: block;
+  color: var(--text-main);
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--accent-dark-orange);
+  padding-bottom: 6px;
+}
+
+.output-item p {
+  color: #374151 !important;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
