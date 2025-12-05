@@ -1,0 +1,30 @@
+# Ignora arquivos que contém senhas e chaves de API
+backend/.env
+*.key
+
+# --- Python / Backend ---
+# Ignora arquivos compilados que o Python cria automaticamente (não servem para o GitHub)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Ambientes Virtuais (VENV) ---
+# Ignora a pasta onde as bibliotecas são instaladas (é muito pesada)
+venv/
+.venv/
+env/
+backend/venv/
+backend/.venv/
+
+# --- IDEs e Editores (Configurações pessoais) ---
+# Ignora configurações do VS Code, PyCharm, Mac e Windows
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- Logs e Bancos de Dados Locais ---
+*.log
+*.sqlite3
+instance/
+
