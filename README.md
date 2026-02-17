@@ -1,5 +1,7 @@
 # **🤖 ContentGen Scomfort: Assistente de Conteúdo com IA Generativa**
 
+<br>
+
 ## **Visão Geral**
 
 O ContentGen Scomfort é uma solução de Inteligência Artificial (IA) desenvolvida para auxiliar a equipe de Marketing da Scomfort na criação de conteúdo promocional e informativo (descrições, FAQs, posts de redes sociais).
